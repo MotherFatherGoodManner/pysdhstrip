@@ -86,7 +86,8 @@ def _strip_cue(text: str) -> str:
     # Strip leading colons
     replaced = regex.sub(r"^:\s*", "", replaced, flags=regex.MULTILINE)
 
-    if text != replaced:
-        log.info(f"Performing replacement: {text!r} --> {replaced!r}")
+    #To Display Replacement Output
+    # if text != replaced:
+    #     log.info(f"Performing replacement: {text!r} --> {replaced!r}")
 
     return replaced
