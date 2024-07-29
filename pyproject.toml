@@ -1,6 +1,6 @@
 [project]
 name = "pysdhstrip"
-version = "0.2.0"
+version = "0.3.0"
 description = "Intelligent SDH stripper for SRT subtitles"
 authors = [
   { name = "MotherFatherGoodManner", email = "noiwonttell@gmail.com" },
