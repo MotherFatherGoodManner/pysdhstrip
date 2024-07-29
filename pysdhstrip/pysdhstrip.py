@@ -66,7 +66,7 @@ def _strip_cue(text: str) -> str:
         replaced = "\n".join(x.strip() for x in replaced.splitlines() if x.strip("-")).strip()
 
         if not (not speaker or speaker.strip() in ("", "-") or (speaker.isupper() ^ rest.isupper())):
-            log.warning(f"Skipping ambiguous replacement: {text!r} --> {replaced!r}")
+            #log.warning(f"Skipping ambiguous replacement: {text!r} --> {replaced!r}")
             replaced = text
 
     # Strip lines containing only speaker/music symbols and optional whitespace
@@ -87,7 +87,8 @@ def _strip_cue(text: str) -> str:
     replaced = regex.sub(r"^:\s*", "", replaced, flags=regex.MULTILINE)
 
     #To Display Replacement Output
-    # if text != replaced:
-    #     log.info(f"Performing replacement: {text!r} --> {replaced!r}")
+    if text != replaced:
+        #log.info(f"Performing replacement: {text!r} --> {replaced!r}")
+        pass
 
     return replaced
